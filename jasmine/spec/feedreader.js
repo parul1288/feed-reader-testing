@@ -100,7 +100,7 @@ $(function() {
         });
 
         it('should have atleast a single .entry element within the .feed container', function (done) {
-            var entries = document.getElementsByClassName("entry");
+            var entries = document.querySelectorAll('.feed .entry');
             expect(entries.length).not.toBe(0);
             done();
         });
@@ -125,9 +125,8 @@ $(function() {
             });
         });
 
-        it('should change content whenever loadFeed function is called', function (done) {
+        it('should change content whenever loadFeed function is called', function () {
             expect(firstFeed).not.toEqual(secondFeed);
-            done();
         });
 
     });
